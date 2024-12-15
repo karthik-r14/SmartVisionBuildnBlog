@@ -1,13 +1,91 @@
 <resources>
-    <string name="app_name">SmartVisionBuildnBlog</string>
+    <string name="app_name">SmartVision</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Welcome to SmartVision.</string>
+    <string name="nav_header_subtitle">localhost@smartvision.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_settings">Settings</string>
+    <string name="face_settings">Face Settings</string>
+    <string name="menu_about_features">About Features</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="menu_item_1">Reading Mode</string>
+    <string name="menu_item_2">Summarize Docs</string>
+    <string name="menu_item_3">Detect Objects</string>
+    <string name="menu_item_4">Detect Faces</string>
+    <string name="menu_item_5">Scan Products</string>
+    <string name="dashboard_text">Select an option</string>
+    <string name="announcement">Announcement</string>
+    <string name="image_url">http://192.168.4.1/jpg</string>
+    <string name="initial_text_label">Set your preferences for the options given below</string>
+    <string name="access_point_mode">Access Point Mode</string>
+    <string name="common_network_mode">Common Network Mode</string>
+    <string name="smart_cap_server_url_hint_text">Enter the cam server url.</string>
+    <string name="prompt_hint_text">Enter the prompt text for using gemini.</string>
+    <string name="default_prompt_text">"Describe the image and list items present in the image.</string>
+    <string name="cam_server_url_label">Cam server Url</string>
+    <string name="mode_1_detect_object">Mode 1 - Detect Objects</string>
+    <string name="mode_2_track_objects">Mode 2 - Track Objects</string>
+    <string name="mode_3_track_objects">Mode 3 - Detect objects using Gemini</string>
+    <string name="announcement_status">1. Announcement Status</string>
+    <string name="smart_cap_settings">2. Smart Cap Camera Settings</string>
+    <string name="object_detection_mode_settings">3. Object Detection Mode Settings</string>
+    <string name="prompt_text">Prompt text\nfor Mode-3</string>
+    <string name="minimum_confidence_threshold">4. Minimum Confidence Threshold</string>
+    <string name="detect_faces_settings">5. Face detection Settings</string>
+    <string name="restore_default_settings">6. Restore Default settings</string>
+    <string name="restore_settings_description">Tap on the button above to reset settings to their original defaults.\nNote : When Restore defaults settings is pressed Face Detection Settings will be not be reset.You need to manually delete the familiar faces in Face Detection settings.</string>
+    <string name="restore_defaults_button_text">Restore defaults</string>
+    <string name="feature_not_built">This feature is coming soon.</string>
+    <string name="min_confidence_label">Select minimum confidence(in %) above.</string>
+    <string name="error_text_description">You are not connected to Smart Cap.Please connect to it and try again.</string>
+    <string name="about_us_content">This app is for visually Impaired/Challenged individuals.There are 5 features in this app namely.</string>
+    <string name="attempting_to_connect_msg">Attempting to connect to Smart cap....</string>
+    <string name="connection_successful_msg">Connection to Smart cap is Successful.</string>
+    <string name="more_than_one_face_detected_text">There are %1$s faces detected.</string>
+    <string name="one_face_detected_text">There is 1 face detected.</string>
+    <string name="add_face_button_text">Add New face</string>
+    <string name="enter_face_hint_text">Enter name of Person/Face.</string>
+    <string name="go_to_face_settings">Go Face Settings</string>
+    <string name="add_familiar_faces_text">Add familiar faces</string>
+    <string name="no_face_added_text">There are no familiar faces added as of now. Please click on the ADD NEW FACE button at the bottom to add a familiar face.</string>
+    <string name="no_face_detected_text">There is no face detected in the clicked image.Please try again.</string>
+    <string name="unable_to_crop_image_msg">Unable to crop image.Please try again.</string>
+    <string name="familiar_face_hint">Enter name of the person/face</string>
+    <string name="ok_text">OK</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="dialog_title_msg">Are you sure you want to delete face %1$s. </string>
+    <string name="note_msg">Note : Only Face name can be edited.FaceImage cannot be edited(Please delete this face and add a new one to add a new face image.)</string>
+    <string name="label_reading_mode">Reading mode</string>
+    <string name="label_detect_objects">Detect Objects</string>
+    <string name="label_detect_faces">Detect Faces</string>
+    <string name="select_pdf">Select PDF file to Summarize</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="error_extracting_the_file">There is an error while extracting the file : \n%1$s</string>
+    <string name="internet_not_working_msg">Please check your internet connection and try again</string>
+    <string name="prompt_text_empty_msg">The prompt text should not be empty. Please enter a prompt text or use the default prompt text.</string>
+    <string name="default_document_prompt_text">Summarize the following text content in 150words.</string>
+    <string name="hint_document_prompt_text">Enter prompt text to summarize the document.</string>
+    <string name="step_one_text">1. Set prompt text below to summarize your pdf document.</string>
+    <string name="step_two_text">2. Pick a pdf file from your device to summarize it.</string>
+    <string name="document_summary">Document Summary</string>
+    <string name="language_not_supported">The Language is not supported.</string>
+    <string name="document_summarized_msg">Document summary has been generated and it will be announced after a beep.</string>
+    <string name="steps_to_follow_text">Follow the steps given below to summarize your pdf document.</string>
+    <string name="summarize_another_document">Summarize Another Document</string>
+    <string name="scan_product_note">Note : This feature is coming soon.(At the moment you can only get value of Barcodes/QR-codes but not its corresponding product details.</string>
+    <string name="wait_for_barcode_msg">Wait for Barcode Value appear here</string>
+    <string name="get_product_info">Get Product info</string>
+    <string name="product_info">Product Info is given below\n Product Name : %1$s\n Product Type : %2$s\n Product Cost : %3$s</string>
+    <string name="product_not_found_msg">Unable to find product in our database.</string>
+    <string-array name="feature_description">
+        <item>1. Reading mode - Use this option to recognize text by placing the phone\'s camera over a sheet containing text.</item>
+        <item>2. Summarize Docs - Use this feature to summarize pdf documents.</item>
+        <item>3. Detect Objects - Use this feature to detect objects using the camera module on the smart cap.</item>
+        <item>4. Detect Faces - Use this feature to detect faces and recognize familiar faces using the camera module on the smart cap.</item>
+        <item>5. Scan Products - Use this feature to get details of a product(like its Cost, Expiry date, Mfg date etc.) by scanning the QR-code or Barcode available on it.</item>
+    </string-array>
 </resources>
