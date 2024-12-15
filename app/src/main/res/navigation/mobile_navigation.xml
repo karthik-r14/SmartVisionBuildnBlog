@@ -12,14 +12,27 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.mobileassistant.smartvisionbuildnblog.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_settings"
+        android:name="com.mobileassistant.smartvisionbuildnblog.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.mobileassistant.smartvisionbuildnblog.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_about_features"
+        android:name="com.mobileassistant.smartvisionbuildnblog.ui.about_features.AboutFeaturesFragment"
+        android:label="@string/menu_about_features"
+        tools:layout="@layout/fragment_about_features" />
+
+    <fragment
+        android:id="@+id/nav_object_detection"
+        android:name="com.mobileassistant.smartvisionbuildnblog.ui.detect_objects.ObjectDetectionFragment"
+        android:label="@string/menu_item_3"
+        tools:layout="@layout/fragment_object_detection" />
+
+    <fragment
+        android:id="@+id/nav_scan_code"
+        android:name="com.mobileassistant.smartvisionbuildnblog.ui.scan_code.ScanCodeFragment"
+        android:label="@string/menu_item_5"
+        tools:layout="@layout/fragment_scan_code" />
+
 </navigation>
