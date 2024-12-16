@@ -13,10 +13,10 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import com.mobileassistant.smartvisionbuildnblog.R
+//import com.google.firebase.firestore.FirebaseFirestore
+//import com.google.firebase.firestore.ktx.firestore
+//import com.google.firebase.ktx.Firebase
+//import com.mobileassistant.smartvisionbuildnblog.R
 import com.mobileassistant.smartvisionbuildnblog.databinding.FragmentScanCodeBinding
 import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.CameraSource
 import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.CameraSourcePreview
@@ -35,7 +35,7 @@ class ScanCodeFragment : Fragment(), TextToSpeech.OnInitListener {
     private var preview: CameraSourcePreview? = null
     private var graphicOverlay: GraphicOverlay? = null
     private var textToSpeech: TextToSpeech? = null
-    private lateinit var database: FirebaseFirestore
+//    private lateinit var database: FirebaseFirestore
 
     private val binding get() = _binding!!
 
@@ -51,7 +51,7 @@ class ScanCodeFragment : Fragment(), TextToSpeech.OnInitListener {
         preview = binding.previewView
         graphicOverlay = binding.graphicOverlay
         textToSpeech = TextToSpeech(context, this)
-        database = Firebase.firestore
+//        database = Firebase.firestore
 
         if (allPermissionsGranted()) {
             createCameraSource()
@@ -100,25 +100,25 @@ class ScanCodeFragment : Fragment(), TextToSpeech.OnInitListener {
 
     private fun onProductInfoButtonClicked() {
         val barcodeValue = binding.barcodeValue.text
-        val docRef = database.collection(COLLECTION_PATH).document(barcodeValue.toString())
-        docRef.get().addOnSuccessListener { documentSnapshot ->
-            if (documentSnapshot.exists()) {
-                val product = documentSnapshot.toObject(ProductInfo::class.java)
-                binding.productInfo.text = getString(
-                    R.string.product_info,
-                    product?.productName,
-                    product?.productType,
-                    product?.productCost
-                )
-                textToSpeech?.speak(binding.productInfo.text, TextToSpeech.QUEUE_ADD, null, "")
-            } else {
-                binding.productInfo.text = getString(R.string.product_not_found_msg)
-                textToSpeech?.speak(binding.productInfo.text, TextToSpeech.QUEUE_ADD, null, "")
-            }
-        }.addOnFailureListener { exception ->
-            binding.productInfo.text = getString(R.string.product_not_found_msg)
-            textToSpeech?.speak(binding.productInfo.text, TextToSpeech.QUEUE_ADD, null, "")
-        }
+//        val docRef = database.collection(COLLECTION_PATH).document(barcodeValue.toString())
+//        docRef.get().addOnSuccessListener { documentSnapshot ->
+//            if (documentSnapshot.exists()) {
+//                val product = documentSnapshot.toObject(ProductInfo::class.java)
+//                binding.productInfo.text = getString(
+//                    R.string.product_info,
+//                    product?.productName,
+//                    product?.productType,
+//                    product?.productCost
+//                )
+//                textToSpeech?.speak(binding.productInfo.text, TextToSpeech.QUEUE_ADD, null, "")
+//            } else {
+//                binding.productInfo.text = getString(R.string.product_not_found_msg)
+//                textToSpeech?.speak(binding.productInfo.text, TextToSpeech.QUEUE_ADD, null, "")
+//            }
+//        }.addOnFailureListener { exception ->
+//            binding.productInfo.text = getString(R.string.product_not_found_msg)
+//            textToSpeech?.speak(binding.productInfo.text, TextToSpeech.QUEUE_ADD, null, "")
+//        }
     }
 
     private fun startCameraSource() {

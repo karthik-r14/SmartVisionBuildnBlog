@@ -1,17 +1,31 @@
 [versions]
+activityComposeVersion = "1.9.3"
 agp = "8.5.1"
+barcodeScanningVersion = "17.3.0"
+cameraCamera2Version = "1.4.1"
+cameraLifecycleVersion = "1.4.1"
+cameraVersion = "16.0.0-beta3"
+cameraViewVersion = "1.4.1"
+cardview = "1.0.0"
+composeBomVersion = "2024.12.01"
+firebaseFirestoreKtxVersion = "25.1.1"
+generativeaiVersion = "0.9.0"
 kotlin = "1.9.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+kotlinxCoroutinesAndroidVersion = "1.7.3"
+kotlinxCoroutinesCoreVersion = "1.7.3"
+legacySupportV4 = "1.0.0"
 material = "1.12.0"
 constraintlayout = "2.2.0"
 lifecycleLivedataKtx = "2.8.7"
 lifecycleViewmodelKtx = "2.8.7"
 navigationFragmentKtx = "2.8.5"
 navigationUiKtx = "2.8.5"
+textRecognitionDevanagariVersion = "16.0.1"
 uiTextAndroid = "1.7.6"
 material3Android = "1.3.1"
 imageLabelingDefaultCommon = "17.0.0"
@@ -19,7 +33,23 @@ objectDetectionCustom = "17.0.2"
 coreSplashscreen = "1.0.1"
 
 [libraries]
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
+androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraViewVersion" }
+androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraLifecycleVersion" }
+androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCamera2Version" }
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-legacy-support-v4 = { module = "androidx.legacy:legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanningVersion" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestoreKtxVersion" }
+generativeai = { module = "com.google.ai.client.generativeai:generativeai", version.ref = "generativeaiVersion" }
+jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCoreVersion" }
+jetbrains-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBomVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -33,8 +63,10 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-ui-text-android = { group = "androidx.compose.ui", name = "ui-text-android", version.ref = "uiTextAndroid" }
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
 image-labeling-default-common = { group = "com.google.mlkit", name = "image-labeling-default-common", version.ref = "imageLabelingDefaultCommon" }
+mlkit-camera = { module = "com.google.mlkit:camera", version.ref = "cameraVersion" }
 object-detection-custom = { group = "com.google.mlkit", name = "object-detection-custom", version.ref = "objectDetectionCustom" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+text-recognition-devanagari = { module = "com.google.mlkit:text-recognition-devanagari", version.ref = "textRecognitionDevanagariVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

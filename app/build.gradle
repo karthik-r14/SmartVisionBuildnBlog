@@ -1,7 +1,11 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id 'com.google.gms.google-services'
 }
+
+apply plugin: 'kotlin-kapt'
 
 android {
     namespace 'com.mobileassistant.smartvisionbuildnblog'
@@ -15,6 +19,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
 
     buildTypes {
@@ -24,42 +31,63 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
+        compose true
+        buildConfig = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.0"
+    }
+    aaptOptions {
+        noCompress "tflite"
     }
 }
 
 dependencies {
 
-    implementation libs.androidx.core.ktx
-    implementation libs.androidx.appcompat
-    implementation libs.material
-    implementation libs.androidx.constraintlayout
-    implementation libs.androidx.lifecycle.livedata.ktx
-    implementation libs.androidx.lifecycle.viewmodel.ktx
-    implementation libs.androidx.navigation.fragment.ktx
-    implementation libs.androidx.navigation.ui.ktx
-    // Coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-compiler:2.6.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation "androidx.core:core-splashscreen:1.0.0"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation 'androidx.activity:activity-compose:1.5.1'
     implementation platform('androidx.compose:compose-bom:2022.10.00')
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
-    implementation 'com.google.mlkit:camera:16.0.0-beta1'
-
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.1'
+    implementation 'com.google.mlkit:image-labeling:17.0.7'
     implementation 'com.google.mlkit:text-recognition-devanagari:16.0.0'
-
+    implementation 'com.google.mlkit:object-detection:17.0.0'
+    implementation 'com.google.mlkit:object-detection-custom:17.0.0'
+    implementation 'com.google.guava:guava:27.1-android'
+    implementation 'com.google.mlkit:camera:16.0.0-beta1'
+    // Room
+    implementation 'androidx.room:room-runtime:2.5.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+//    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.1'
+    implementation 'androidx.room:room-compiler:2.6.1'
+    implementation 'androidx.room:room-ktx:2.5.2'
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+    // Tensorflow
+    implementation 'org.tensorflow:tensorflow-lite:2.4.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.4.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.2.0'
     // CameraX
     implementation "androidx.camera:camera-camera2:1.0.0-SNAPSHOT"
     implementation "androidx.camera:camera-lifecycle:1.0.0-SNAPSHOT"
@@ -69,13 +97,4 @@ dependencies {
     implementation 'com.google.mlkit:barcode-scanning:17.2.0'
     // Google AI client SDK
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
-    implementation libs.androidx.ui.text.android
-    implementation libs.androidx.material3.android
-    implementation libs.image.labeling.default.common
-    implementation libs.object.detection.custom
-    implementation libs.androidx.core.splashscreen
-
-    testImplementation libs.junit
-    androidTestImplementation libs.androidx.junit
-    androidTestImplementation libs.androidx.espresso.core
 }
