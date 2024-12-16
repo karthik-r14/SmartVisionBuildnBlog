@@ -11,4 +11,20 @@
 
 ## Blog post link :  https://medium.com/@karthikr1493/smartvision-ai-enabled-mobile-assistant-for-visually-impaired-challenged-individuals-061bc5f5260a
 
+## How to build an AI enabled mobile assistant for visually impaired and challenged individuals
+
+## Introduction/Overview
+
+## In a world that revolves around sight, the visually impaired often face unique challenges that can hinder their ability to navigate and experience the world with confidence and independence. However, the relentless pursuit of technological innovation has given rise to the SmartVision App, designed specifically to empower and enhance the lives of the visually impaired.
+
+## The target audience for this blog is for anyone who wants to learn how to integrate Gemini API with an android app and also use firebase with Google ML-Kit(Barcode scanning API).(Note : Prerequisite knowledge of building android apps in which you can create few screen using activities and fragment is necessary).
+ 
+## By the end of this blog post you will learn to build an app with few use cases which are beneficial for visually impaired and challenged individuals.
+
+## The use cases that we will build are given below:
+
+## 1) Detect objects : By using this feature a visually impaired user can detect obstacles from a WiFi enabled camera(ESP32 cam module) placed on the smart cap. Images captured using the cam module will be wirelessly sent to android app & Objects present in the image will be described by Gemini-2.0-Flash API and the announced to the visually impaired user using Text to Speech API. I am using Gemini Flash because it is faster and thus has less response time compared to Gemini Pro.
+
+## 2) Scan Products: In this feature, the user has to scan the barcode of a product using the on-device camera and the product details corresponding to the product will be fetched from the Firestore database and then announced to the user using Text to Speech API.
+
 
