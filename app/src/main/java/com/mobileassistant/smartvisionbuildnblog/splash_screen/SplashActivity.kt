@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.mobileassistant.smartvisionbuildnblogMainActivity
-import com.mobileassistant.smartvisionbuildnblogsplash_screen.ui.theme.SmartVisionTheme
+import com.mobileassistant.smartvisionbuildnblog.MainActivity
+import com.mobileassistant.smartvisionbuildnblog.splash_screen.ui.theme.SmartVisionTheme
 
 class SplashActivity : ComponentActivity() {
     private val viewModel: SplashViewModel by viewModels()

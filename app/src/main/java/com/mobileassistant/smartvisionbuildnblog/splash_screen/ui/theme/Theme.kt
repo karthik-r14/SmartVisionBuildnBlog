@@ -1,4 +1,4 @@
-package com.mobileassistant.smartvisionbuildnblogsplash_screen.ui.theme
+package com.mobileassistant.smartvisionbuildnblog.splash_screen.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -22,7 +22,7 @@ import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.CameraSource
 import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.CameraSourcePreview
 import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.GraphicOverlay
 import com.mobileassistant.smartvisionbuildnblog.ui.scan_code.ProductInfo
-import com.mobileassistant.smartvisionbuildnblogmlkit.barcodescanner.BarcodeScannerProcessor
+import com.mobileassistant.smartvisionbuildnblog.mlkit.barcodescanner.BarcodeScannerProcessor
 import java.io.IOException
 import java.util.Locale
 

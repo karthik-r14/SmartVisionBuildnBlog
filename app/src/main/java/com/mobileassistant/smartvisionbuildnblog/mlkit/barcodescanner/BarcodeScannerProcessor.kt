@@ -25,7 +25,7 @@ import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
 import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.GraphicOverlay
-import com.mobileassistant.smartvisionbuildnblogmlkit.utils.VisionProcessorBase
+import com.mobileassistant.smartvisionbuildnblog.mlkit.utils.VisionProcessorBase
 
 /** Barcode Detector Demo.  */
 class BarcodeScannerProcessor(context: Context) : VisionProcessorBase<List<Barcode>>(context) {

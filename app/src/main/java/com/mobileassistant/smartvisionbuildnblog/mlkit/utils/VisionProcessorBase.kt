@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mobileassistant.smartvisionbuildnblogmlkit.utils
+package com.mobileassistant.smartvisionbuildnblog.mlkit.utils
 
 
 import android.app.ActivityManager

@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.mobileassistant.smartvisionbuildnblog.R
 import com.mobileassistant.smartvisionbuildnblog.databinding.FragmentHomeBinding
 import com.mobileassistant.smartvisionbuildnblog.model.MenuItem
-import com.mobileassistant.smartvisionbuildnblogui.home.DashboardAdapter
 
 private const val NO_OF_COLUMNS = 2
 

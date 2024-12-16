@@ -56,6 +56,7 @@ dependencies {
 
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.4.1'
+    implementation 'com.google.mlkit:text-recognition-devanagari:16.0.0'
 
     // CameraX
     implementation "androidx.camera:camera-camera2:1.0.0-SNAPSHOT"
@@ -66,6 +67,11 @@ dependencies {
     implementation 'com.google.mlkit:barcode-scanning:17.2.0'
     // Google AI client SDK
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
+    implementation libs.androidx.ui.text.android
+    implementation libs.androidx.material3.android
+    implementation libs.image.labeling.default.common
+    implementation libs.object.detection.custom
+    implementation libs.androidx.core.splashscreen
 
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit

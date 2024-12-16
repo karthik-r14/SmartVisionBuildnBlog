@@ -1,4 +1,4 @@
-package com.mobileassistant.smartvisionbuildnblogsplash_screen.ui.theme
+package com.mobileassistant.smartvisionbuildnblog.splash_screen.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

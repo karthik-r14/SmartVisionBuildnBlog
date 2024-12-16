@@ -1,4 +1,4 @@
-package com.mobileassistant.smartvisionbuildnblogui.home
+package com.mobileassistant.smartvisionbuildnblog.ui.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.mobileassistant.smartvisionbuildnblogR
-import com.mobileassistant.smartvisionbuildnblogmodel.MenuItem
+import com.mobileassistant.smartvisionbuildnblog.R
+import com.mobileassistant.smartvisionbuildnblog.model.MenuItem
 
 class DashboardAdapter(context: Context, items: List<MenuItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {

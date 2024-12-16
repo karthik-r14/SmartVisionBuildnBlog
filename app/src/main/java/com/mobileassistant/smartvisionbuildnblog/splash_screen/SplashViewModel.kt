@@ -1,4 +1,4 @@
-package com.mobileassistant.smartvisionbuildnblogsplash_screen
+package com.mobileassistant.smartvisionbuildnblog.splash_screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
